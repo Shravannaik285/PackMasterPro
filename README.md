@@ -101,6 +101,48 @@ npm run dev
 
 ---
 
+## 🌐 Deploying to Vercel (Full-Stack Frontend & Backend)
+
+PackMaster Pro is configured for **seamless full-stack deployment on Vercel** (Vite React frontend + Serverless Express API):
+
+### Step 1: Push Code to GitHub
+1. Create a new repository on [GitHub](https://github.com/new) (e.g., `packmaster-pro`).
+2. Link your local repository and push:
+   ```bash
+   git remote add origin https://github.com/<your-username>/packmaster-pro.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+### Step 2: Import into Vercel
+1. Open the [Vercel Dashboard](https://vercel.com/new).
+2. Connect your GitHub account and click **Import** next to `packmaster-pro`.
+3. In **Project Settings**:
+   - **Root Directory**: `./` (leave default)
+   - The included [`vercel.json`](./vercel.json) automatically handles the build commands and serverless routing.
+
+### Step 3: Add Environment Variables in Vercel
+In the Vercel deployment screen under **Environment Variables**, add:
+
+| Variable | Value | Purpose |
+|---|---|---|
+| `MONGODB_URI` | `mongodb+srv://<user>:<password>@cluster0.mongodb.net/packmaster?retryWrites=true&w=majority` | Cloud MongoDB connection string |
+| `NVIDIA_API_KEY` | *(Optional)* `nvapi-...` | NVIDIA NIM AI API key (heuristic fallback activates if omitted) |
+| `NVIDIA_MODEL` | `meta/llama-3.2-11b-vision-instruct` | LLM model for AI recommendations |
+| `FIREBASE_PROJECT_ID` | `packmasterpro-fc1b7` | Firebase Project ID |
+| `FIREBASE_CLIENT_EMAIL` | *(Optional)* Service Account Email | Optional for full service account verification |
+| `FIREBASE_PRIVATE_KEY` | *(Optional)* Service Account Private Key | Optional for full service account verification |
+
+### Step 4: Authorize Vercel Domain in Firebase
+> [!IMPORTANT]
+> Once Vercel assigns your live domain (e.g., `packmaster-pro.vercel.app`):
+> 1. Go to [Firebase Console](https://console.firebase.google.com/) ➔ Your Project (`packmasterpro-fc1b7`).
+> 2. Navigate to **Authentication** ➔ **Settings** ➔ **Authorized Domains**.
+> 3. Click **Add Domain** and paste your Vercel domain (`packmaster-pro.vercel.app`).
+> This ensures Google Sign-In works seamlessly in production.
+
+---
+
 ## 🧠 Viva Presentation Explanations
 
 ### 1. How does Authentication work?
