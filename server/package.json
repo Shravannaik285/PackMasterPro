@@ -1,0 +1,30 @@
+{
+  "name": "packmaster-server",
+  "version": "1.0.0",
+  "description": "Backend API for PackMaster Pro",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "packmaster",
+    "packaging",
+    "express",
+    "mongodb",
+    "nvidia-nim"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.10.0",
+    "mongoose": "^8.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
