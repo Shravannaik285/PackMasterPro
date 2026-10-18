@@ -4,9 +4,9 @@ const admin = require('firebase-admin');
  * Initializes the Firebase Admin SDK.
  * Supports:
  * 1. Full Service Account credential (if private key & client email are provided)
- * 2. Project ID initialization (validates ID tokens for project 'packmasterpro-fc1b7')
+ * 2. Project ID initialization (validates ID tokens for project 'packmasterpro-243c1')
  */
-const projectId = process.env.FIREBASE_PROJECT_ID || 'packmasterpro-fc1b7';
+const projectId = process.env.FIREBASE_PROJECT_ID || 'packmasterpro-243c1';
 
 if (!admin.apps.length) {
   try {

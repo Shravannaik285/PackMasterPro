@@ -129,14 +129,14 @@ In the Vercel deployment screen under **Environment Variables**, add:
 | `MONGODB_URI` | `mongodb+srv://<user>:<password>@cluster0.mongodb.net/packmaster?retryWrites=true&w=majority` | Cloud MongoDB connection string |
 | `NVIDIA_API_KEY` | *(Optional)* `nvapi-...` | NVIDIA NIM AI API key (heuristic fallback activates if omitted) |
 | `NVIDIA_MODEL` | `meta/llama-3.2-11b-vision-instruct` | LLM model for AI recommendations |
-| `FIREBASE_PROJECT_ID` | `packmasterpro-fc1b7` | Firebase Project ID |
+| `FIREBASE_PROJECT_ID` | `packmasterpro-243c1` | Firebase Project ID |
 | `FIREBASE_CLIENT_EMAIL` | *(Optional)* Service Account Email | Optional for full service account verification |
 | `FIREBASE_PRIVATE_KEY` | *(Optional)* Service Account Private Key | Optional for full service account verification |
 
 ### Step 4: Authorize Vercel Domain in Firebase
 > [!IMPORTANT]
 > Once Vercel assigns your live domain (e.g., `packmaster-pro.vercel.app`):
-> 1. Go to [Firebase Console](https://console.firebase.google.com/) ➔ Your Project (`packmasterpro-fc1b7`).
+> 1. Go to [Firebase Console](https://console.firebase.google.com/) ➔ Your Project (`packmasterpro-243c1`).
 > 2. Navigate to **Authentication** ➔ **Settings** ➔ **Authorized Domains**.
 > 3. Click **Add Domain** and paste your Vercel domain (`packmaster-pro.vercel.app`).
 > This ensures Google Sign-In works seamlessly in production.

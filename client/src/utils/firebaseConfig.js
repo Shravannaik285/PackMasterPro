@@ -6,13 +6,13 @@ import { getAuth, GoogleAuthProvider } from 'firebase/auth';
  * Reads from environment variables (VITE_FIREBASE_*) with user project defaults.
  */
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || 'AIzaSyDKjtwK12WjZ8zt_onifXMnsfSoCN0o9ks',
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'packmasterpro-fc1b7.firebaseapp.com',
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'packmasterpro-fc1b7',
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || 'packmasterpro-fc1b7.firebasestorage.app',
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '88955607248',
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || '1:88955607248:web:fc071187a5e3a80757e6d5',
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || 'G-XWKL3V3X7G',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || 'AIzaSyA7D-n0dm8lIpTAiWhNkCakHmq9EunPkLQ',
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || 'packmasterpro-243c1.firebaseapp.com',
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'packmasterpro-243c1',
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || 'packmasterpro-243c1.firebasestorage.app',
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || '925446501306',
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || '1:925446501306:web:886525904b6233188b6383',
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || 'G-2WPYQDCC9J',
 };
 
 // Check if Firebase has a valid API key configured
